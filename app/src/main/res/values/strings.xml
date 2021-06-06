@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">CAP GG</string>
+    <string name="cap_default_string">5.0</string>
+    <string name="cap_title_string">Current CAP:</string>
+    <string name="grade_title_string">Grade Record:</string>
+    <string name="bitcoin_price_title_string">Current Bitcoin Price:</string>
+    <string name="bitcoin_price_last_update_title_string">Last Updated at:</string>
+    <string name="bitcoin_price_default">N.A.</string>
+    <string name="bitcoin_last_update_default">N.A.</string>
+    <string name="add_grade_record_button_string">Add Grade</string>
+    <string name="add_grade_record_page_title_string">Add Your Grade Record:</string>
+    <string name="add_grade_module_code_title_string">Module Code</string>
+    <string name="add_grade_module_grade_title_string">Module Grade</string>
+    <string name="add_grade_module_credit_title_string">Module Credit</string>
+    <string name="add_grade_su_status_title_string">S/U Option</string>
+    <string name="grade_a_plus">A+ (5.0)</string>
+    <string name="grade_a">A (5.0)</string>
+    <string name="grade_a_minus">A- (4.5)</string>
+    <string name="grade_b_plus">B+ (4.0)</string>
+    <string name="grade_b">B (3.5)</string>
+    <string name="grade_b_minus">B- (3.0)</string>
+    <string name="grade_c_plus">C+ (2.5)</string>
+    <string name="grade_c">C (2.0)</string>
+    <string name="grade_d_plus">D (1.5)</string>
+    <string name="grade_d">D (1.0)</string>
+    <string name="grade_f">F (0)</string>
+    <string name="add_grade_submit_button_string">RECORD GRADE</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="delete_record">DELETE RECORD</string>
+    <string name="save_changes">SAVE CHANGES</string>
+    <string name="cancel">CANCEL</string>
+</resources>

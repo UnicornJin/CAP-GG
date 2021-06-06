@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="record"
+            type="com.example.capgg.data.GradeRecord" />
+        <variable
+            name="clickListener"
+            type="com.example.capgg.calculator.GradeRecordListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{() -> clickListener.onClick(record)}">
+
+        <ImageView
+            android:id="@+id/grade_item_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/grade_item_module_title"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/grade_item_icon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/grade_item_module_grade"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/grade_item_module_title"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/grade_item_module_credit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/grade_item_icon"
+            app:layout_constraintTop_toBottomOf="@+id/grade_item_module_title" />
+
+        <TextView
+            android:id="@+id/grade_item_module_su_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/grade_item_icon"
+            app:layout_constraintTop_toBottomOf="@+id/grade_item_module_credit" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

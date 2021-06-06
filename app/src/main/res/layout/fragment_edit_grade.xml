@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.capgg.calculator.EditGradeViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/edit_grade_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Your Grade Record"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/edit_module_code_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            app:srcCompat="@drawable/ic_module_code"
+            app:layout_constraintBottom_toBottomOf="@+id/edit_module_code"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/edit_module_code" />
+
+        <EditText
+            android:id="@+id/edit_module_code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/edit_module_code_icon"
+            app:layout_constraintTop_toBottomOf="@+id/edit_grade_title"/>
+
+        <ImageView
+            android:id="@+id/edit_module_credit_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/edit_module_credit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/edit_module_credit"
+            app:srcCompat="@drawable/ic_baseline_analytics_24" />
+
+        <EditText
+            android:id="@+id/edit_module_credit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/edit_module_credit_icon"
+            app:layout_constraintTop_toBottomOf="@+id/edit_module_code"/>
+
+        <ImageView
+            android:id="@+id/edit_grade_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/edit_grade_choose_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/edit_grade_choose_title"
+            app:srcCompat="@drawable/ic_module_grade" />
+
+        <TextView
+            android:id="@+id/edit_grade_choose_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/add_grade_module_grade_title_string"
+            app:layout_constraintStart_toEndOf="@id/edit_grade_icon"
+            app:layout_constraintTop_toBottomOf="@+id/edit_module_credit" />
+
+        <RadioGroup
+            android:id="@+id/edit_grade_choose"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/edit_grade_icon"
+            app:layout_constraintTop_toBottomOf="@+id/edit_grade_choose_title"
+            >
+
+            <RadioButton
+                android:id="@+id/edit_grade_choose_a_plus"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:text="@string/grade_a_plus" />
+            <RadioButton
+                android:id="@+id/edit_grade_choose_a"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:text="@string/grade_a" />
+            <RadioButton
+                android:id="@+id/edit_grade_choose_a_minus"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:text="@string/grade_a_minus" />
+            <RadioButton
+                android:id="@+id/edit_grade_choose_b_plus"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:text="@string/grade_b_plus" />
+            <RadioButton
+                android:id="@+id/edit_grade_choose_b"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:text="@string/grade_b" />
+            <RadioButton
+                android:id="@+id/edit_grade_choose_b_minus"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:text="@string/grade_b_minus" />
+            <RadioButton
+                android:id="@+id/edit_grade_choose_c_plus"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:text="@string/grade_c_plus" />
+            <RadioButton
+                android:id="@+id/edit_grade_choose_c"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:text="@string/grade_c" />
+            <RadioButton
+                android:id="@+id/edit_grade_choose_d_plus"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:text="@string/grade_d_plus" />
+            <RadioButton
+                android:id="@+id/edit_grade_choose_d"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:text="@string/grade_d" />
+            <RadioButton
+                android:id="@+id/edit_grade_choose_f"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:text="@string/grade_f" />
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/edit_su_option_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/edit_su_option_switch"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/edit_su_option_switch"
+            app:srcCompat="@drawable/ic_baseline_airline_seat_individual_suite_24" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/edit_su_option_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/add_grade_su_status_title_string"
+            android:textSize="15dp"
+            app:layout_constraintStart_toEndOf="@+id/edit_su_option_icon"
+            app:layout_constraintTop_toBottomOf="@+id/edit_grade_choose" />
+
+        <Button
+            android:id="@+id/edit_grade_submit_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/save_changes"
+            app:layout_constraintEnd_toStartOf="@+id/edit_delete_record_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_su_option_switch"
+            android:onClick="@{()->viewModel.doSubmission()}"/>
+
+        <Button
+            android:id="@+id/edit_delete_record_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/delete_record"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/edit_grade_submit_button"
+            app:layout_constraintTop_toBottomOf="@+id/edit_su_option_switch"
+            android:onClick="@{()->viewModel.onDeleteRecord()}"/>
+
+        <Button
+            android:id="@+id/edit_cancel_edition"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/cancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_grade_submit_button"
+            android:onClick="@{()->viewModel.onCancelUpdate()}"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

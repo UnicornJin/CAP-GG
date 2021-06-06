@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.capgg.calculator.HomePageViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.capgg.MainActivity">
+
+        <Button
+            android:id="@+id/add_grade_record_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_grade_record_button_string"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:onClick="@{() -> viewModel.signalNavigating()}"
+            app:layout_constraintBottom_toTopOf="@+id/grade_record_title"
+            app:layout_constraintEnd_toStartOf="@+id/cap_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/cap_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cap_title_string"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.699"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/cap_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="@string/cap_default_string"
+            android:textColor="@color/cap_safe"
+            android:textSize="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/cap_title"
+            app:layout_constraintTop_toBottomOf="@+id/cap_title" />
+
+        <TextView
+            android:id="@+id/grade_record_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/grade_title_string"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cap_text" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/bitcoin_price_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/grade_record_title" />
+
+        <TextView
+            android:id="@+id/bitcoin_price_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bitcoin_price_title_string"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/bitcoin_price_text"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/bitcoin_price_status"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:srcCompat="@drawable/ic_baseline_cloud_off_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bitcoin_price_title" />
+
+        <TextView
+            android:id="@+id/bitcoin_price_text"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:text="@string/bitcoin_price_default"
+            android:textAlignment="center"
+            android:textSize="35dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/bitcoin_price_last_update_title"
+            app:layout_constraintStart_toEndOf="@+id/bitcoin_price_status" />
+
+        <TextView
+            android:id="@+id/bitcoin_price_last_update_title"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="@string/bitcoin_price_last_update_title_string"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bitcoin_price_title" />
+
+        <TextView
+            android:id="@+id/bitcoin_price_last_update_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/bitcoin_last_update_default"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/bitcoin_price_text"
+            app:layout_constraintTop_toBottomOf="@+id/bitcoin_price_last_update_title" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homePageFragment">
+
+    <fragment
+        android:id="@+id/homePageFragment"
+        android:name="com.example.capgg.calculator.HomePageFragment"
+        android:label="HomePageFragment" >
+        <action
+            android:id="@+id/action_homePageFragment_to_addGradeFragment"
+            app:destination="@id/addGradeFragment" />
+        <action
+            android:id="@+id/action_homePageFragment_to_editGradeFragment"
+            app:destination="@id/editGradeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addGradeFragment"
+        android:name="com.example.capgg.calculator.AddGradeFragment"
+        android:label="AddGradeFragment" >
+        <action
+            android:id="@+id/action_addGradeFragment_to_homePageFragment"
+            app:destination="@id/homePageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editGradeFragment"
+        android:name="com.example.capgg.calculator.EditGradeFragment"
+        android:label="fragment_edit_grade"
+        tools:layout="@layout/fragment_edit_grade" >
+        <action
+            android:id="@+id/action_editGradeFragment_to_homePageFragment"
+            app:destination="@id/homePageFragment" />
+        <argument
+            android:name="recordId"
+            app:argType="long" />
+    </fragment>
+</navigation>
